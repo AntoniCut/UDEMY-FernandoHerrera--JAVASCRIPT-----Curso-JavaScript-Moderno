@@ -10,7 +10,7 @@
 
 export const envirounmentsComponent = ( element ) => {
 
-    console.warn("-----  Variables de Entorno  -----");
+    console.warn('\n-----  Variables de Entorno  -----');
     console.log( import.meta.env);
 
     const html = `
@@ -18,7 +18,6 @@ export const envirounmentsComponent = ( element ) => {
         Prod: ${ import.meta.env.PROD} <br>
         KEY: ${ import.meta.env.VITE_API_KEY} <br>
         URL: ${ import.meta.env.VITE_BASE_URL} <br>
-        
     `;
 
     element.innerHTML = html;

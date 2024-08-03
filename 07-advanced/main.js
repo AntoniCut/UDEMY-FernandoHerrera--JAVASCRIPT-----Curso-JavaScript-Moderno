@@ -12,6 +12,9 @@ import { demoComponent } from './src/concepts/00-demo.js'
 import { envirounmentsComponent } from './src/concepts/01-environments.js'
 import { CallbacksComponent } from './src/concepts/02-callbacks.js'
 import { PromiseComponent } from './src/concepts/03-promises.js'
+import { PromiseAllComponent } from './src/concepts/04-promises-all.js'
+import { PromiseRaceComponent } from './src/concepts/05-promises-race.js'
+import { AsyncComponent } from './src/concepts/06-async.js'
 
 
 
@@ -35,11 +38,13 @@ document.querySelector('#app').innerHTML = `
       <button id="counter" type="button"></button>
     </div>
 
-    <div id="card">
-      
-    </div>
-
-    
+    <div id="envirounment">  </div>
+    <div id="callback">  </div>
+    <div id="promise">  </div>
+    <div id="promiseAll">  </div>
+    <div id="promiseRace">  </div>
+    <div id="async">  </div>
+        
   </div>
 `
 
@@ -48,9 +53,18 @@ setupCounter(document.querySelector('#counter'))
 
 console.warn('*****  07 Advanced  *****');
 
-const element = document.getElementById('card');
+const envirounment = document.getElementById('envirounment');
+const callback = document.getElementById('callback');
+const promise = document.getElementById('promise');
+const promiseAll = document.getElementById('promiseAll');
+const promiseRace = document.getElementById('promiseRace');
+const async = document.getElementById('async');
+
 
 //demoComponent(element);
-//envirounmentsComponent(element);
-//CallbacksComponent(element);
-PromiseComponent(element);
+//envirounmentsComponent(envirounment);
+//CallbacksComponent(callback);
+//PromiseComponent(promise);
+//PromiseAllComponent(promiseAll);
+//PromiseRaceComponent(promiseRace);
+AsyncComponent(async);

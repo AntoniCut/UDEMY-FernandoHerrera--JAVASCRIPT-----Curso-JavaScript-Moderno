@@ -15,20 +15,68 @@ export const PromiseComponent = (element) => {
 
     console.warn('\n-----  03-promises  -----');
 
+
     const renderHero = (hero) => {
-        element.innerHTML = hero.name;
+        element.innerHTML += '<h1> Promises </h1>';
+        element.innerHTML += hero.name;
     }
+
+
+    const renderTwoHeros1 = (hero1, hero2) => {
+        element.innerHTML += '<h1> Promises </h1>';
+        element.innerHTML += ` <h2> Forma 1 - Promises Hell </h2> <h3> ${hero1.name} </h3> <h3> ${hero2.name} </h3> `;
+    }
+
+    const renderTwoHeros2 = (hero1, hero2) => {
+        element.innerHTML += '<h1> Promises </h1>';
+        element.innerHTML += ` <h2> Forma 2 - Promises Hell </h2> <h3> ${hero1.name} </h3> <h3> ${hero2.name} </h3> `;
+    }
+
 
     const renderError = (error) => {
-        element.innerHTML = ` <h2> Error: </h2> <h3> ${error}</h3> `;
+        element.innerHTML += '<h1> Promises </h1>';
+        element.innerHTML += ` <h2> Error: </h2> <h3> ${error}</h3> `;
     }
 
-    const id1 = '5d86371f25a058e5b1c8a65e-';            //  Capitan America
+
+    const id1 = '5d86371f25a058e5b1c8a65e';            //  Capitan America
     const id2 = '5d86371f233c9f2425f16916';             //  Black Widow
 
+
+    //  **********  Forma 1  **********
     findHero(id1)
-        .then(renderHero)
-        .catch(renderError)
+
+        .then((hero1) => {
+
+            findHero(id2)
+
+                .then((hero2) => {
+                    renderTwoHeros1(hero1, hero2);
+                })
+                .catch(renderError);
+        })
+
+        .catch(renderError);
+
+
+    //  **********  Forma 2  **********
+    
+
+    let hero1;
+
+    findHero(id1)
+
+        .then(hero => {
+            
+            hero1 = hero;
+            return findHero(id2);
+
+        }).then(hero2 => {
+
+            renderTwoHeros2(hero1, hero2);
+        })
+
+        .catch(renderError);
 
 }
 
@@ -50,7 +98,8 @@ const findHero = (id) => {
         }
 
         reject(`Hero with id ${id} not found.`);
-
     });
-
 }
+
+
+

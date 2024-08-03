@@ -14,6 +14,8 @@ export const CallbacksComponent = (element) => {
 
     console.warn('\n-----  02-callbacks  -----');
 
+    // element.innerHTML = '<h1> Callbacks</h1>';
+
     const id1 = '5d86371fd55e2e2a30fe1ccb1';        //  Doctor Strange
     const id2 = '5d86371fd55e2e2a30fe1ccb2';        //  Spider Man
     
@@ -22,7 +24,9 @@ export const CallbacksComponent = (element) => {
         //element.innerHTML = hero?.name || 'No hay heroe';
 
         if(error) {
-            element.innerHTML = error; 
+
+            element.innerHTML += '<h1> Callbacks </h1>';
+            element.innerHTML += error; 
             return;
         }
 
@@ -33,7 +37,8 @@ export const CallbacksComponent = (element) => {
                 return;
             }
 
-            element.innerHTML = `${hero1.name} / ${hero2.name}`;
+            element.innerHTML += '<h1> Callbacks </h1>';
+            element.innerHTML += `${hero1.name} / ${hero2.name}`;
 
         });
 

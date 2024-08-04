@@ -1,6 +1,6 @@
-//  *******************************************************************
-//  **********  07-advanced/src/concepts/01-environments.js  **********
-//  *******************************************************************
+//  *******************************************
+//  **********  07-advanced/main.js  **********
+//  *******************************************
 
 
 import './style.css'
@@ -15,6 +15,9 @@ import { PromiseComponent } from './src/concepts/03-promises.js'
 import { PromiseAllComponent } from './src/concepts/04-promises-all.js'
 import { PromiseRaceComponent } from './src/concepts/05-promises-race.js'
 import { AsyncComponent } from './src/concepts/06-async.js'
+import { AsyncAwaitComponent } from './src/concepts/07-async-await.js'
+import { AsyncAwait2Component } from './src/concepts/08-async-await-2.js'
+import { ForAwaitComponent } from './src/concepts/09-for-await.js'
 
 
 
@@ -44,6 +47,9 @@ document.querySelector('#app').innerHTML = `
     <div id="promiseAll">  </div>
     <div id="promiseRace">  </div>
     <div id="async">  </div>
+    <div id="asyncAwait">  </div>
+    <div id="asyncAwait2">  </div>
+    <div id="forAwait">  </div>
         
   </div>
 `
@@ -59,12 +65,17 @@ const promise = document.getElementById('promise');
 const promiseAll = document.getElementById('promiseAll');
 const promiseRace = document.getElementById('promiseRace');
 const async = document.getElementById('async');
-
+const asyncAwait = document.getElementById('asyncAwait');
+const asyncAwait2 = document.getElementById('asyncAwait2');
+const forAwait = document.getElementById('forAwait');
 
 //demoComponent(element);
-//envirounmentsComponent(envirounment);
-//CallbacksComponent(callback);
-//PromiseComponent(promise);
-//PromiseAllComponent(promiseAll);
-//PromiseRaceComponent(promiseRace);
-AsyncComponent(async);
+// envirounmentsComponent(envirounment);
+// CallbacksComponent(callback);
+// PromiseComponent(promise);
+// PromiseAllComponent(promiseAll);
+// PromiseRaceComponent(promiseRace);
+// AsyncComponent(async);
+// AsyncAwaitComponent(asyncAwait);
+//AsyncAwait2Component(asyncAwait2);
+ForAwaitComponent(forAwait);

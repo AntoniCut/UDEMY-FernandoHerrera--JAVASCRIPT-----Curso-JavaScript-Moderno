@@ -17,20 +17,20 @@ export const PromiseAllComponent = (element) => {
 
 
     const renderHero = (hero) => {
-        element.innerHTML += '<h1> Promises All </h1>';
+        element.innerHTML += '<h1> 04 - Promises All </h1>';
         element.innerHTML += hero.name;
     }
 
 
     const renderTwoHeros = (hero1, hero2) => {
-        element.innerHTML += '<h1> Promises All </h1>';
+        element.innerHTML += '<h1> 04 - Promises All </h1>';
         element.innerHTML += ` <h3> ${hero1.name} </h3> <h3> ${hero2.name} </h3> `;
 
     }
 
 
     const renderError = (error) => {
-        element.innerHTML += '<h1> Promises All </h1>';
+        element.innerHTML += '<h1> 04 - Promises All </h1>';
         element.innerHTML += ` <h2> Error: </h2> <h3> ${error}</h3> `;
     }
 

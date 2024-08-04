@@ -25,7 +25,7 @@ export const CallbacksComponent = (element) => {
 
         if(error) {
 
-            element.innerHTML += '<h1> Callbacks </h1>';
+            element.innerHTML += '<h1> 02 - Callbacks </h1>';
             element.innerHTML += error; 
             return;
         }
@@ -37,7 +37,7 @@ export const CallbacksComponent = (element) => {
                 return;
             }
 
-            element.innerHTML += '<h1> Callbacks </h1>';
+            element.innerHTML += '<h1> 02 - Callbacks </h1>';
             element.innerHTML += `${hero1.name} / ${hero2.name}`;
 
         });

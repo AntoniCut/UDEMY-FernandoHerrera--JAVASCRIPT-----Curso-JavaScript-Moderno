@@ -1,6 +1,6 @@
-//  *********************************************************
-//  **********  /src/concepts/01-envirounments.js  **********
-//  *********************************************************
+//  *********************************************************************
+//  **********  /src07-advanced//concepts/01-envirounments.js  **********
+//  *********************************************************************
 
 
 /**
@@ -14,7 +14,7 @@ export const envirounmentsComponent = ( element ) => {
     console.log( import.meta.env);
 
     const html = `
-        <h1> Envirounment </h1>
+        <h1> 01 - Envirounment </h1>
         Dev: ${ import.meta.env.DEV} <br>
         Prod: ${ import.meta.env.PROD} <br>
         KEY: ${ import.meta.env.VITE_API_KEY} <br>

@@ -18,7 +18,7 @@ export const PromiseRaceComponent = (element) => {
     element.innerHTML = 'Loading';
 
     const renderValue = (value) => {
-        element.innerHTML = '<h1> Promises Race </h1>';
+        element.innerHTML = '<h1> 05 - Promises Race </h1>';
         element.innerHTML += ` <h2> ${value} </h2>`;
     }
 

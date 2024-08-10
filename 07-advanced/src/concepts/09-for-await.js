@@ -28,8 +28,6 @@ export const ForAwaitComponent = async (element) => {
     }
     
 
-
-
     if( await getHeroAsync(id1)) {
         element.innerHTML += 'Si existe ese Heroe';
         return;
@@ -37,9 +35,9 @@ export const ForAwaitComponent = async (element) => {
 
     element.innerHTML += 'No existe ese Heroe';
 
-
-
 }
+
+
 
 /**
  * --  Regresa un arreglo de promesas  --

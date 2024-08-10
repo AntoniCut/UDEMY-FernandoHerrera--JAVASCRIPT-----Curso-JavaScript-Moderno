@@ -18,6 +18,8 @@ import { AsyncComponent } from './src/concepts/06-async.js'
 import { AsyncAwaitComponent } from './src/concepts/07-async-await.js'
 import { AsyncAwait2Component } from './src/concepts/08-async-await-2.js'
 import { ForAwaitComponent } from './src/concepts/09-for-await.js'
+import { GeneratorFunctionComponent } from './src/concepts/10-generator-function.js'
+import { GeneratorAsyncComponent } from './src/concepts/11-generator-async.js'
 
 
 
@@ -50,6 +52,8 @@ document.querySelector('#app').innerHTML = `
     <div id="asyncAwait">  </div>
     <div id="asyncAwait2">  </div>
     <div id="forAwait">  </div>
+    <div id="generatorFunc">  </div>
+    <div id="generatorAsync">  </div>
         
   </div>
 `
@@ -68,14 +72,18 @@ const async = document.getElementById('async');
 const asyncAwait = document.getElementById('asyncAwait');
 const asyncAwait2 = document.getElementById('asyncAwait2');
 const forAwait = document.getElementById('forAwait');
+const generatorFunc = document.getElementById('generatorFunc');
+const generatorAsync = document.getElementById('generatorAsync');
 
 //demoComponent(element);
-// envirounmentsComponent(envirounment);
-// CallbacksComponent(callback);
-// PromiseComponent(promise);
-// PromiseAllComponent(promiseAll);
-// PromiseRaceComponent(promiseRace);
-// AsyncComponent(async);
-// AsyncAwaitComponent(asyncAwait);
-//AsyncAwait2Component(asyncAwait2);
+envirounmentsComponent(envirounment);
+CallbacksComponent(callback);
+PromiseComponent(promise);
+PromiseAllComponent(promiseAll);
+PromiseRaceComponent(promiseRace);
+AsyncComponent(async);
+AsyncAwaitComponent(asyncAwait);
+AsyncAwait2Component(asyncAwait2);
 ForAwaitComponent(forAwait);
+GeneratorFunctionComponent(generatorFunc);
+GeneratorAsyncComponent(generatorAsync);

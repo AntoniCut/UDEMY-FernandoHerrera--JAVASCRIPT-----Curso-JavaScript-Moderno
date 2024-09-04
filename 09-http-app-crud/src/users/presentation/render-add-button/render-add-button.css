@@ -1,0 +1,16 @@
+/*  ********************************************************************************************************  */
+/*  **********  /09-http-app-crud/src/users/presentation/render-add-button/render-add-button.css  **********  */
+/*  ********************************************************************************************************  */
+
+
+.fab-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-weight: bold;
+    transition: all 300ms ease-in-out;
+}
+
+.fab-button:hover {
+    background-color: bisque;
+}

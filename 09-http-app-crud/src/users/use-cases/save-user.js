@@ -1,0 +1,55 @@
+//  ***************************************************************************
+//  **********  /09-http-app-crud/src/users/use-cases/save-usere.js  **********
+//  ***************************************************************************
+
+
+import { User } from "../models/user"
+
+
+/**
+ * -----  Salvar Usuario  ----- 
+ * @param {Like<User>} userLike 
+ */
+
+export const saveUser = async (userLike) => {
+
+    const user = new User(userLike);
+
+    //  TODO: aqui falta un mapper.
+
+    if (user.id) {
+        throw 'No Implementada la actualizacion';
+        return;
+    }
+
+    //const updateUser = await createUser( user);
+    //return updateUser;
+
+    return await createUser(user);      //  igual que las 2 lineas comentadas.
+
+}
+
+
+/**
+ * 
+ * @param {Like<User>} user 
+ */
+const createUser = async (user) => {
+
+    const url = `${import.meta.env.VITE_BASE_URL}/users`;
+
+    //  -----  Realizamos un Posteo de la Respuesta  -----
+    const res = await fetch(url, {
+        method: 'POST',
+        body: JSON.stringify(user),     //  serializar un objeto a un STRING.
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+
+    //  -----  Si Todo sale Bien - Tenemos un Usuario Creado  -----
+    const newUser = await res.json();      //  ahora convertimos a JSON.
+
+    console.log("newUser: ", { newUser })
+    return newUser;
+}

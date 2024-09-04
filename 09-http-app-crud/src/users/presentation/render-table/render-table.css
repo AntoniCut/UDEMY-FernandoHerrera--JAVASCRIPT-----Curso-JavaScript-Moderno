@@ -1,0 +1,26 @@
+/*  **********************************************************************************************  */
+/*  **********  /09-http-app-crud/src/users/presentation/render-table/render-table.css  **********  */
+/*  **********************************************************************************************  */
+
+
+table {
+    /* background-color: rgba(0, 0, 0, 0.348); */
+    background-color: #F5F5DC;
+    border-radius: 5px;
+    padding: 5px;
+    border-spacing: 10px; /* Espacio entre celdas */
+    /* color: white; */
+    color: #504f4b;
+}
+
+.table-headers th {
+    padding: 15px 10px; /* Espacio interno en los encabezados */
+    border-bottom: 2px solid #ddd; /* Borde inferior */
+    text-align: left; /* Alineación del texto */
+    color: black;
+    font-weight: bold;
+}
+
+tbody {
+    background-color: #F9F9F9;
+}

@@ -18,10 +18,10 @@ const state = {
 const loadNextPage = async () => {
 
     //throw new Error('No Implementado');
-    if(state.currentPage === totalPages) return;
-    
+    if (state.currentPage === totalPages) return;
+
     const users = await loadUsersByPage(state.currentPage + 1);
-    
+
     state.currentPage += 1;
     state.users = users;
 }
@@ -31,13 +31,13 @@ const loadNextPage = async () => {
  * ----- ir a la pagina anterior  -----
  */
 const loadPreviousPage = async () => {
-    
+
     //throw new Error('No Implementado');
-    if(state.currentPage === 1) return;
-    
+    if (state.currentPage === 1) return;
+
     const users = await loadUsersByPage(state.currentPage - 1);
     //console.log("state.currentPage = ", state.currentPage);
-    
+
     state.currentPage -= 1;
     state.users = users;
 }
@@ -67,13 +67,13 @@ export default {
     loadPreviousPage,
     onUserChange,
     reloadPage,
-        
+
     /**
      * -----  getUsers()  -----
      * @returns {User[]}
      */
     getUsers: () => [...state.users],
-    
+
     /**
      * -----  getCurrentPage()  -----
      * @returns {Number}

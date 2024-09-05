@@ -5,6 +5,7 @@
 
 import modalHTML from './render-modal.html?raw';
 import './render-modal.css';
+//import { items } from '../../use-cases/load-users-by-page';
 
 
 let modal, form;
@@ -47,9 +48,7 @@ export const renderModal = (element, callback) => {
     //  -----  creación de una Referencia al formulario  -----
     form = modal.querySelector('form');
 
-    //  -----  Añadimos el 'modal' al HTML  -----
-    element.append(modal);
-
+    
     //  -----  click en qualquier lugar de la pagina si el modal se visualiza y asi cerrarlo  -----
     modal.addEventListener('click', (event) => {
 
@@ -61,21 +60,27 @@ export const renderModal = (element, callback) => {
     form.addEventListener('submit', async(event) => {
 
         event.preventDefault();
-        console.log("\nevent submit - Formulario Enviado: ", event);
+        //console.log("\nevent submit - Formulario Enviado: ", event);
         
         //  -----  Serializamos los datos del formulario  -----
         const formData = new FormData(form);
-        
-        
+                
         const userLike = {};
+        
 
         for (const [key, value] of formData) {
             
-            console.log("iterator: ", "key: ", key, "value: ", value);
+            //console.log("iterator: ", "key: ", key, "value: ", value);
 
             //  -----  Validaciones  -----
+            if( key === 'id') {
+                //value = String(items);
+                userLike[key] = value;
+                continue;
+            }
+            
             if ( key === 'balance' ){
-                userLike[key] =  +value;        //  Convertimos a NUmber.
+                userLike[key] =  +value;        //  Convertimos a Number.
                 continue;
             }
 
@@ -84,6 +89,8 @@ export const renderModal = (element, callback) => {
                 continue;
             }
             
+            
+
             userLike[key] = value;
         }
 
@@ -95,4 +102,7 @@ export const renderModal = (element, callback) => {
         //  -----  Ocultamos el Modal  -----
         hideModal();
     });
+
+    //  -----  Añadimos el 'modal' al HTML  -----
+    element.append(modal);
 }

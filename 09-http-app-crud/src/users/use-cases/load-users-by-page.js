@@ -6,7 +6,7 @@
 import { localhostUserToModel } from "../mappers/localhost-user.mapper";
 import { User } from "../models/user";
 
-export let totalPages;
+export let totalPages, items;
 
 /**
  * -----  Cargar Usuarios por página  -----
@@ -22,10 +22,12 @@ export const loadUsersByPage = async (page = 1) => {
 
     // -----  Asigna el número total de páginas
     totalPages = data.pages;
-    //console.warn("totalPages: ", totalPages);
+    items = data.items;
+    console.warn("totalPages: ", totalPages, "items: ", items);
 
     if (page > totalPages) return null; // Si la página solicitada es mayor al total, devolver null
 
+    //  -----  Mapper  localhostUserToModel  -----
     const users = data.data.map(localhostUserToModel);
     return users;
 }

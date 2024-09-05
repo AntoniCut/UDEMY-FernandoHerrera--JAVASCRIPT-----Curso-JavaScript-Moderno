@@ -3,6 +3,7 @@
 //  ***************************************************************************
 
 
+import { userModelTolocalhost } from "../mappers/user-to-localhost.mapper";
 import { User } from "../models/user"
 
 
@@ -15,7 +16,8 @@ export const saveUser = async (userLike) => {
 
     const user = new User(userLike);
 
-    //  TODO: aqui falta un mapper.
+    //  -----  mapper userModelToLocalhost  -----
+    const userToSave = userModelTolocalhost(user);
 
     if (user.id) {
         throw 'No Implementada la actualizacion';
@@ -25,7 +27,7 @@ export const saveUser = async (userLike) => {
     //const updateUser = await createUser( user);
     //return updateUser;
 
-    return await createUser(user);      //  igual que las 2 lineas comentadas.
+    return await createUser( userToSave);      //  igual que las 2 lineas comentadas.
 
 }
 

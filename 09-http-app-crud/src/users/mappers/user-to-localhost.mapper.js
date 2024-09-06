@@ -3,7 +3,7 @@
 //  **************************************************************************************
 
 
-import { User } from "../models/user";
+import { User } from '../models/user';
 
 
 /**
@@ -12,10 +12,9 @@ import { User } from "../models/user";
  * @returns {Object}
  */
 
-export const userModelTolocalhost = ( user ) => {
+export const userModelToLocalhost = ( user ) => {
 
-    
-    //  -----  Desestructuramos el User del Model -----
+    //  -----  Desestructuramos el User del Model -----  USUARIO
     const {
         avatar,
         balance,
@@ -26,7 +25,7 @@ export const userModelTolocalhost = ( user ) => {
         lastName,
     } = user;
 
-    //  -----  Regresa un Objeto de Usuarios  -----
+    //  -----  Regresa un Objeto de Usuarios  -----  BACKEND
     return {
         avatar,
         balance,
@@ -34,8 +33,7 @@ export const userModelTolocalhost = ( user ) => {
         gender,
         id,
         isActive,
-        last_name: lastName
-    };
+        last_name: lastName,
+    }
+
 }
-
-

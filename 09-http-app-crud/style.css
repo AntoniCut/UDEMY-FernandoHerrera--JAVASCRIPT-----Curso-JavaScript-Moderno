@@ -4,155 +4,148 @@
 
 
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
 }
 
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  color: #F5F5DC;
-  background-color: #1a1a1a;
+    color: #F5F5DC;
+    background-color: #1a1a1a;
 }
 
 #app {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100vh;
-  text-align: center;
-  background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background-color: #1a1a1a;
 }
 
 .header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 150px;
-  width: 100%;
-  height: 100px;
-  background-color: beige;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    width: 100%;
+    height: 100px;
+    background-color: beige;
 }
 
 .card {
-  /* margin-top: 50px; */
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
+    /* margin-top: 50px; */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 
 
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
 }
 
 a:hover {
-  color: #535bf2;
+    color: #535bf2;
 }
 
-/* body {
-margin: 0;
-display: flex;
-place-items: center;
-min-width: 320px;
-min-height: 100vh;
-} */
 
 h1 {
-  font-size: 2em;
-  line-height: 1.1;
-  color: #1A1A1A;
+    font-size: 2em;
+    line-height: 1.1;
+    color: #1A1A1A;
 }
 
 .logo {
-  height: 3em;
-  padding: 1.5em;
-  will-change: filter;
+    height: 3em;
+    padding: 1.5em;
+    will-change: filter;
 }
 
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+    filter: drop-shadow(0 0 2em #646cffaa);
 }
 
 .logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+    filter: drop-shadow(0 0 2em #f7df1eaa);
 }
 
 span {
-  font-size: 56px;
+    font-size: 56px;
 }
 
 blockquote, h3 {
-  width: 80%;
+    width: 80%;
 }
 
 .btnQuote {
-  width: 150px;
-  height: 40px;
-  background-color: #F5F5DC;
-  transition: all 300ms ease-in-out;
+    width: 150px;
+    height: 40px;
+    background-color: #F5F5DC;
+    transition: all 300ms ease-in-out;
 }
 
 .btnQuote:hover {
-  background-color: #535bf2;
+    background-color: #535bf2;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
 }
 
 button:hover {
-  border-color: #646cff;
+    border-color: #646cff;
 }
 
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+    outline: 4px auto -webkit-focus-ring-color;
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
-      color: #213547;
-      background-color: #ffffff;
-  }
+    :root {
+        color: #213547;
+        background-color: #ffffff;
+    }
 
-  a:hover {
-      color: #747bff;
-  }
+    a:hover {
+        color: #747bff;
+    }
 
-  button {
-      background-color: #f9f9f9;
-  }
+    button {
+        background-color: #f9f9f9;
+    }
 }
 
 
@@ -160,113 +153,13 @@ button:focus-visible {
 
 @media (width < 780px) {
 
-  .header {
-      justify-content: center;
-      gap: 0;
-  }
+    .header {
+        justify-content: center;
+        gap: 0;
+    }
 
-  h1 {
-      font-size: 1em;
-  }
-
-
+    h1 {
+        font-size: 1em;
+    }
 }
 
-
-
-/* :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */

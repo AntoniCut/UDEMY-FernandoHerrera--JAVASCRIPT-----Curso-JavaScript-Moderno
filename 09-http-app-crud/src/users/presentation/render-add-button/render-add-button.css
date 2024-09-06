@@ -14,3 +14,21 @@
 .fab-button:hover {
     background-color: bisque;
 }
+
+
+/*  *****  Responsive  *****  */
+@media (width < 400px) {
+
+    .fab-button {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 14px;
+        height: 14px;
+        /* line-height: 0;
+        text-align: center; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -4,19 +4,21 @@
 
 
 table {
-    /* background-color: rgba(0, 0, 0, 0.348); */
     background-color: #F5F5DC;
     border-radius: 5px;
     padding: 5px;
-    border-spacing: 10px; /* Espacio entre celdas */
-    /* color: white; */
+    border-spacing: 10px;
+    /* Espacio entre celdas */
     color: #504f4b;
 }
 
 .table-headers th {
-    padding: 15px 10px; /* Espacio interno en los encabezados */
-    border-bottom: 2px solid #ddd; /* Borde inferior */
-    text-align: left; /* Alineación del texto */
+    padding: 15px 10px;
+    /* Espacio interno en los encabezados */
+    border-bottom: 2px solid #ddd;
+    /* Borde inferior */
+    text-align: left;
+    /* Alineación del texto */
     color: black;
     font-weight: bold;
 }
@@ -24,3 +26,61 @@ table {
 tbody {
     background-color: #F9F9F9;
 }
+
+
+/*  **********  Responsive  **********  */
+
+@media (width < 565px) {
+
+    table {
+        font-size: 12px;
+    }
+}
+
+
+@media (width < 475px) {
+
+    table {
+        font-size: 10px;
+    }
+
+    .table-headers th {
+        padding: 10px 5px;
+    }
+}
+
+@media (width < 475px) {
+
+    table {
+        font-size: 10px;
+    }
+
+    .table-headers th {
+        padding: 10px 5px;
+    }
+}
+
+
+@media (width < 400px) {
+
+    body {
+        background-color: #1a1a1a;
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .fab-button {
+        position: relative;
+        top: auto;   /* Resetea los valores si es necesario */
+        right: auto;
+    }
+}
+
+
+
+

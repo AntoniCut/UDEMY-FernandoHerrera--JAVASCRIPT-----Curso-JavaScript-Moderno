@@ -27,3 +27,12 @@ button {
 .button-pages:hover {
     background-color: bisque;
 }
+
+
+/*  *****  Responsive  *****  */
+@media (width < 400px) {
+
+    .button-pages {
+        font-size: 10px;
+    }
+}

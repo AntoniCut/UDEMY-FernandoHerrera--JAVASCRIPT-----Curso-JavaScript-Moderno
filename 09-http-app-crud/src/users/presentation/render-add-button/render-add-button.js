@@ -13,19 +13,20 @@ import './render-add-button.css';
  * @param {()=>void} callback
  */
 
-export const renderAddButton = (element, callback) => {
+export const renderAddButton = ( element ) => {
 
     const fabButton = document.createElement('button');
     fabButton.innerText = '+';
     fabButton.classList.add('fab-button');
 
-    element.append(fabButton);
+    element.append( fabButton );
 
-    fabButton.addEventListener('click', () => {
-
+    //TODO:
+    fabButton.addEventListener('click', () =>{
+        
         //throw Error('No Implementado');
         //if(!callback) return;
-        callback();
         showModal();
     });
+
 }

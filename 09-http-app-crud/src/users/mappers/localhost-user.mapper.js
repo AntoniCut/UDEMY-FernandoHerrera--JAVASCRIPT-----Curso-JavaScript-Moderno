@@ -3,18 +3,16 @@
 //  ***********************************************************************************
 
 
-import { User } from "../models/user";
-
+import { User } from "../models/user"
 
 /**
- * -----  Mapper de User --  Regresa una instancia de usuarios  -----
+ * 
  * @param {Like<User>} localhostUser 
  * @returns {User}
  */
+export const localhostUserToModel = ( localhostUser ) => {
 
-export const localhostUserToModel = (localhostUser) => {
-
-    //  -----  Desestructuramos el localhostUser como vienen los datos en el backend -----
+    //  -----  Desestructuramos el localhostUser como vienen los datos en el backend -----  BACKEND
     const {
         avatar,
         balance,
@@ -22,10 +20,10 @@ export const localhostUserToModel = (localhostUser) => {
         gender,
         id,
         isActive,
-        last_name
+        last_name,
     } = localhostUser;
 
-    //  -----  Regresa una Instancia de Usuarios  -----
+    //  -----  Regresa una Instancia de Usuarios  -----  USUARIO
     return new User({
         avatar,
         balance,
@@ -33,8 +31,6 @@ export const localhostUserToModel = (localhostUser) => {
         gender,
         id,
         isActive,
-        lastName: last_name
+        lastName: last_name,
     });
 }
-
-

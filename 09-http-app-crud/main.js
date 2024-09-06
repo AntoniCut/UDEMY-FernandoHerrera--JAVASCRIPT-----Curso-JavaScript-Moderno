@@ -8,6 +8,8 @@ import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 import { UsersApp } from './src/users/users-app'
 
+
+//  ----------  Renderizado Principal de la Aplicacíon  -----
 document.querySelector('#app').innerHTML = `
              
     <header class="header">
@@ -23,12 +25,13 @@ document.querySelector('#app').innerHTML = `
         </a>
 
     </header>
-                
+   
     <main class="card">
             
     </main>
-  `;
+
+`;
+
 
 const element = document.querySelector('.card');
 UsersApp(element);
-
